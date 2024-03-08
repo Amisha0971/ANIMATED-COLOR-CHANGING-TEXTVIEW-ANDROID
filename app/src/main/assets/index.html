@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Multicolor Gradient Text</title>
+    <style>
+        /* Define the animation */
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Apply animation to the text */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set the container height to fill the viewport */
+        }
+
+        .gradient-text {
+            font-size: 3rem; /* Adjust the font size as needed */
+            background: linear-gradient(90deg,  #800080, #800080, #800080, #e90d95, #e90997, #cc0b58, #FF0000); /* Set the gradient colors */
+            background-size: 200% 200%;
+            -webkit-background-clip: text; /* For Safari */
+            color: transparent; /* Make the text transparent */
+            -webkit-text-fill-color: transparent; /* For Safari */
+            display: inline-block; /* Ensure each letter gets its own color */
+            animation: gradient-animation 6s ease infinite; /* Change '6s' to adjust animation speed */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        <span class="gradient-text">G</span>
+        <span class="gradient-text">r</span>
+        <span class="gradient-text">a</span>
+        <span class="gradient-text">d</span>
+        <span class="gradient-text">i</span>
+        <span class="gradient-text">e</span>
+        <span class="gradient-text">n</span>
+        <span class="gradient-text">t</span>
+        <span class="gradient-text"> </span>
+        <span class="gradient-text">T</span>
+        <span class="gradient-text">e</span>
+        <span class="gradient-text">x</span>
+        <span class="gradient-text">t</span>
+    </h1>
+</div>
+</body>
+</html>
