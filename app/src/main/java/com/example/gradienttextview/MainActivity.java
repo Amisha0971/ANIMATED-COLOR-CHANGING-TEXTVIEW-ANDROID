@@ -20,15 +20,6 @@ public class MainActivity extends AppCompatActivity {
         webView = findViewById(R.id.webview);
         webView.loadUrl("file:///android_asset/index.html");
 
-        // Show gradient for 1 minute
-        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                // Start SecondActivity
-                Intent intent = new Intent(MainActivity.this, secondActivity.class);
-                startActivity(intent);
-                finish(); // Optional, if you don't want to keep MainActivity in the back stack
-            }
-        }, 30000); // 30000 milliseconds = 30 sec
+
     }
 }
