@@ -5,56 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animated Multicolor Gradient Text</title>
     <style>
-        /* Define the animation */
-        @keyframes gradient-animation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+    * {
+        margin: 0;
+        padding: 0;
+    }
 
-        /* Apply animation to the text */
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Set the container height to fill the viewport */
-        }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #000;
+    }
 
-        .gradient-text {
-            font-size: 3rem; /* Adjust the font size as needed */
-            background: linear-gradient(90deg,  #800080, #800080, #800080, #e90d95, #e90997, #cc0b58, #FF0000); /* Set the gradient colors */
-            background-size: 200% 200%;
-            -webkit-background-clip: text; /* For Safari */
-            color: transparent; /* Make the text transparent */
-            -webkit-text-fill-color: transparent; /* For Safari */
-            display: inline-block; /* Ensure each letter gets its own color */
-            animation: gradient-animation 6s ease infinite; /* Change '6s' to adjust animation speed */
+    .content {
+        font-size: 100px;
+        line-height: 1;
+        text-align: center;
+        font-family: 'Bebas Neue', sans-serif; /* Corrected font family */
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(45deg, purple, blue, magenta, red, cyan, blue, violet, purple, yellow);
+        background-size: 400% 400%;
+        animation: animate 15s ease infinite;
+    }
+
+    .content span {
+        font-size: 100px;
+    }
+
+    @keyframes animate {
+        0% {
+            background-position: 0 0;
         }
-    </style>
+        25% {
+            background-position: 100% 0;
+        }
+        50% {
+            background-position: 100% 100%;
+        }
+        75% {
+            background-position: 0 100%;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+</style>
 </head>
 <body>
-<div class="container">
-    <h1>
-        <span class="gradient-text">G</span>
-        <span class="gradient-text">r</span>
-        <span class="gradient-text">a</span>
-        <span class="gradient-text">d</span>
-        <span class="gradient-text">i</span>
-        <span class="gradient-text">e</span>
-        <span class="gradient-text">n</span>
-        <span class="gradient-text">t</span>
-        <span class="gradient-text"> </span>
-        <span class="gradient-text">T</span>
-        <span class="gradient-text">e</span>
-        <span class="gradient-text">x</span>
-        <span class="gradient-text">t</span>
-    </h1>
-</div>
+<h1 class="content">Gradient Text<br><span>View</span></h1>
 </body>
 </html>
